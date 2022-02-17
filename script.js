@@ -64,6 +64,20 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
 
     // available income
     const incomeInputAdd = getCalculateIncome(incomeInputValue, allAmountAdd);
-    return incomeInputAdd;
+
+    // save percentage
+    const saveButton = document.getElementById('save-btn').addEventListener('click', function(){
+        const remainingBalance = document.getElementById('remaining-balance');
+        const saveAmount = document.getElementById('saving-amount');
+
+        const saveInput = document.getElementById('save-input');
+        const saveInputValue = getInputValue(saveInput);
+
+        const percentage = (saveInputValue / 100) * incomeInputAdd;
+        saveAmount.innerText = percentage;
+        
+        const remainingTotal = incomeInputAdd - percentage;
+        remainingBalance.innerText = remainingTotal;
+    })
 })
 
