@@ -67,17 +67,23 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
 
     // save percentage
     const saveButton = document.getElementById('save-btn').addEventListener('click', function(){
+        const errorMessage = document.getElementById('error-message2');
         const remainingBalance = document.getElementById('remaining-balance');
         const saveAmount = document.getElementById('saving-amount');
 
         const saveInput = document.getElementById('save-input');
         const saveInputValue = getInputValue(saveInput);
 
-        const percentage = (saveInputValue / 100) * incomeInputAdd;
-        saveAmount.innerText = percentage;
-        
-        const remainingTotal = incomeInputAdd - percentage;
-        remainingBalance.innerText = remainingTotal;
+        if(saveInputValue < 100){
+            const percentage = (saveInputValue / 100) * incomeInputAdd;
+            saveAmount.innerText = percentage;
+            
+            const remainingTotal = incomeInputAdd - percentage;
+            remainingBalance.innerText = remainingTotal;
+        }
+        else{
+            errorMessage.style.display = 'block';
+        }
     })
 })
 
