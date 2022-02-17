@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <title>Estimate of salary expenses</title>
+</head>
+<body class="w-11/12 mx-auto border-2 border-gray-300 my-4">
+
+    <!------------------------- header start ---------------------->
+    <header>
+        <section class="my-8">
+            <h1 class="text-center text-5xl font-semibold text-green-500">Estimate of salary expenses <span class="text-gray-400"><i class="fa-solid fa-money-bill-1-wave"></i></span></h1>
+        </section>
+    </header>
+    <!------------------------- header end ---------------------->
+
+    <!------------------------- main start ---------------------->
+    <main>
+        <section class="grid grid-cols-2 gap-5 p-8">
+            <div>
+                <img class="max-w-full max-h-full rounded" src="./emil-kalibradov-swIN9v5uS5Y-unsplash.jpg" alt="">
+            </div>
+
+            <!-- Calculation Form -->
+            <div class="text-center">
+                <div>
+                    <!-- total income -->
+                    <h2 class="text-3xl font-semibold mb-5">Income</h2>
+                    <span class="text-xl text-gray-500 -ml-6">Income:</span>
+                    <input id="income-input" class="py-2 border-gray-300 rounded bg-gray-200 pl-2 ml-2" type="text" placeholder="$">
+
+                    <!-- income expenses -->
+                    <h2 class="text-3xl font-semibold my-5">Expenses</h2>
+                    <div class="block my-3">
+                        <span class="text-xl text-gray-500 -ml-1">Food:</span>
+                        <input id="food-input" class="py-2 border-gray-300 rounded bg-gray-200 pl-2 ml-2" type="text" placeholder="$">
+                    </div>
+                    <div class="block my-3">
+                        <span class="text-xl text-gray-500">Rent:</span>
+                        <input id="rent-input" class="py-2 border-gray-300 rounded bg-gray-200 pl-2 ml-2" type="text" placeholder="$">
+                    </div>
+                    <div class="block my-3">
+                        <span class="text-xl text-gray-500 -ml-6">Clothes:</span>
+                        <input id="clothes-input" class="py-2 border-gray-300 rounded bg-gray-200 pl-2 ml-2" type="text" placeholder="$">
+                    </div>
+                    <button id="calculate-btn" class="bg-green-500 text-white py-1 px-7 text-xl rounded my-4">Calculate</button>
+                </div>
+
+                <h2 class="text-xl">Total Expenses: $<span id="total-expenses">00</span></h2>
+                <h2 class="text-xl my-5">Available Balance: $<span id="available-balance">00</span></h2>
+
+                <!-- saving income -->
+                <div class="block my-3">
+                    <span class="text-xl text-gray-500 -ml-5">Save:</span>
+                    <input class="py-2 border-gray-300 rounded bg-gray-200 mx-2 w-20 text-center" type="text" placeholder="%">
+                    <span class="text-xl text-gray-500 mr-2">%</span>
+                    <button class="bg-green-500 text-white py-1 px-7 text-xl rounded my-4">Save</button>
+                </div>
+                <h2 class="text-xl">Saving Amount: <span>$00</span></h2>
+                <h2 class="text-xl my-2">Remaining Balance: <span>$00</span></h2>
+            </div>
+        </section>
+    </main>
+    <!------------------------- header start ---------------------->
+
+    <!------------------------- JavaScript ---------------------->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
