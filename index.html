@@ -21,9 +21,9 @@
 
     <!------------------------- main start ---------------------->
     <main>
-        <section class="grid grid-cols-2 gap-5 p-8">
+        <section class="grid md:grid-cols-2 md:gap-5 sm:grid-cols-1 sm:gap-3 p-8">
             <div>
-                <img class="max-w-full max-h-full rounded" src="./emil-kalibradov-swIN9v5uS5Y-unsplash.jpg" alt="">
+                <img class="max-w-full max-h-full rounded" src="./money.jpg" alt="">
             </div>
 
             <!-- Calculation Form -->
@@ -48,6 +48,7 @@
                         <span class="text-xl text-gray-500 -ml-6">Clothes:</span>
                         <input id="clothes-input" class="py-2 border-gray-300 rounded bg-gray-200 pl-2 ml-2" type="text" placeholder="$">
                     </div>
+                    <p id="error-message1" class="text-red-600 hidden">Please! provide valid number</p>
                     <button id="calculate-btn" class="bg-green-500 text-white py-1 px-7 text-xl rounded my-4">Calculate</button>
                 </div>
 
@@ -57,12 +58,13 @@
                 <!-- saving income -->
                 <div class="block my-3">
                     <span class="text-xl text-gray-500 -ml-5">Save:</span>
-                    <input class="py-2 border-gray-300 rounded bg-gray-200 mx-2 w-20 text-center" type="text" placeholder="%">
+                    <input id="save-input" class="py-2 border-gray-300 rounded bg-gray-200 mx-2 w-20 text-center" type="text" placeholder="%">
                     <span class="text-xl text-gray-500 mr-2">%</span>
-                    <button class="bg-green-500 text-white py-1 px-7 text-xl rounded my-4">Save</button>
+                    <button id="save-btn" class="bg-green-500 text-white py-1 px-7 text-xl rounded my-4">Save</button>
                 </div>
-                <h2 class="text-xl">Saving Amount: <span>$00</span></h2>
-                <h2 class="text-xl my-2">Remaining Balance: <span>$00</span></h2>
+                <p id="error-message2" class="text-red-600 hidden">Please! provide valid number</p>
+                <h2 class="text-xl">Saving Amount: $<span id="saving-amount">00</span></h2>
+                <h2 class="text-xl my-2">Remaining Balance: $<span>00</span></h2>
             </div>
         </section>
     </main>
